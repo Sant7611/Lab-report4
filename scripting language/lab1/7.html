@@ -1,0 +1,12 @@
+<html>
+    <body>
+        <button type="button" id="show">Generate</button> <br>
+        <span id="generate"></span>
+        <script>
+            document.getElementById("show").addEventListener("click", ran)
+            function ran(){
+                document.getElementById("generate").innerHTML = Math.random();
+            }
+        </script>
+    </body>
+</html>

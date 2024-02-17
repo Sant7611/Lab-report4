@@ -1,0 +1,13 @@
+<html>
+  <body>
+    <div id="writeHere"></div>
+    <button id="trigger" type="button">Display Text</button>
+    <script>
+      document.getElementById("trigger").addEventListener("click", display);
+      function display() {
+        document.getElementById("writeHere").innerHTML =
+          "this is displayed text";
+      }
+    </script>
+  </body>
+</html>

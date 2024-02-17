@@ -1,0 +1,24 @@
+<html>
+  <body>
+    <input type="text" id="email" />
+    <button type="button" id="validate">Validate</button> <br />
+    <span id="show"></span>
+    <script>
+      document
+        .getElementById("validate")
+        .addEventListener("click", validateEmail);
+
+      function validateEmail() {
+        var email = document.getElementById("email").value;
+
+        const regex =
+          /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+        match = regex.test(email);
+        match
+          ? (document.getElementById("show").innerHTML = "Valid")
+          : (document.getElementById("show").innerHTML = "invalid");
+        //return match;
+      }
+    </script>
+  </body>
+</html>

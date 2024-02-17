@@ -1,0 +1,17 @@
+<html>
+  <body>
+    <div id="display"></div>
+    <button type="button" id="show">Show</button>
+    <script>
+      document.getElementById("show").addEventListener("click", showDateTime);
+      var check = document.getElementById("display");
+      current = new Date();
+      function showDateTime() {
+        const current_date = current.toLocaleDateString();
+        const current_time = current.toLocaleTimeString();
+        document.getElementById("display").innerHTML =
+         "Date:"  + current_date +  "Time: "+ current_time;
+      }
+    </script>
+  </body>
+</html>

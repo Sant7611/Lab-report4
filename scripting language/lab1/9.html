@@ -1,0 +1,64 @@
+<html>
+  <body>
+    <form id="contact-form" onsubmit="return validateForm()" novalidate>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required />
+      <br />
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required />
+      <br />
+      <label for="phone">Phone:</label>
+      <input type="tel" id="phone" name="phone" required />
+      <br />
+      <br />
+      <button type="submit">Submit</button>
+    </form>
+
+    <script>
+      function validateForm() {
+        // Basic regex for email (improve by combining it with DED checks and more detailed syntax checks)
+        const emailRegex =
+        /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+
+        const name = document.getElementById("name").value;
+        const email = document.getElementById("email").value;
+        const phone = document.getElementById("phone").value;
+
+        let isValid = true;
+
+        // Name validation
+        if (name.trim() === "") {
+          isValid = false;
+          createErrorMessage("Name is required");
+        }
+
+        // Email validation
+        if (!emailRegex.test(email)) {
+          isValid = false;
+          createErrorMessage("Invalid email format");
+        }
+
+        // Phone validation (using a very basic example - adapt based on your requirements)
+        const phoneRegex = /^98\d{8}$/;
+        if (!phoneRegex.test(phone)) {
+          isValid = false;
+          createErrorMessage("Invalid phone number format");
+        }
+        
+        return isValid;
+      }
+
+      function createErrorMessage(message) {
+        const errorMessage = document.createElement("div");
+        errorMessage.textContent = message;
+        // Insert the error message above the corresponding field (adjust based on your HTML structure)
+        document
+          .getElementById("name")
+          .parentNode.insertBefore(
+            errorMessage,
+            document.querySelector("label")
+          );
+      }
+    </script>
+  </body>
+</html>

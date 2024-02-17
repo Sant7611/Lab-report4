@@ -1,0 +1,16 @@
+<html>
+  <body>
+    <script>
+      function setCookie(id, name, time) {
+        document.cookie =
+          "name:" +
+          name +
+          "; email: " +
+          "admin@admin.com" +
+          time * 24 * 60 * 60 +
+          ";path = /";
+      }
+      setCookie(1, "karan", 5);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,14 @@
+<html>
+  <body>
+    <div id="count">1</div>
+    <button type="button" id="inr">increase</button>
+    <script>
+      document.getElementById("inr").addEventListener("click", increase);
+      var increase = parseInt(document.getElementById("count").innerHTML);
+      function increase() {
+        increase += 1;
+        document.getElementById("count").innerHTML = increase;
+      }
+    </script>
+  </body>
+</html>

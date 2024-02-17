@@ -1,0 +1,15 @@
+<html>
+  <body>
+    <div id="display"></div>
+    <script>
+      function displayTextAfterDelay() {
+        const textElement = document.getElementById("display");
+
+        setTimeout(() => {
+          textElement.textContent = "This text appeared after 2 seconds!";
+        }, 2000);
+      }
+      displayTextAfterDelay();
+    </script>
+  </body>
+</html>

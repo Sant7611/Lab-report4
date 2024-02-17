@@ -1,0 +1,12 @@
+<html>
+  <body>
+    <div id="update">Hello World</div>
+    <button type="button" id="trigger">Update</button>
+    <script>
+      document.getElementById("trigger").addEventListener("click", updateText);
+      function updateText() {
+        document.getElementById("update").innerHTML = "Text Updated";
+      }
+    </script>
+  </body>
+</html>

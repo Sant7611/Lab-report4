@@ -1,0 +1,16 @@
+<html>
+  <body>
+    <input type="text" id="changeCase" />
+    <button type="button" id="change">Change Case</button><br />
+    <span id="show"></span>
+    <script>
+      document.getElementById("change").addEventListener("click", changeCase);
+
+      function changeCase() {
+        let str = document.getElementById("changeCase").value;
+        str = str.toUpperCase();
+        document.getElementById("show").innerHTML = str;
+      }
+    </script>
+  </body>
+</html>
