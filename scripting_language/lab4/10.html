@@ -1,0 +1,31 @@
+<html><head>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+</head>
+  <style>
+    .display {
+      display: none;
+    }
+    .color {
+      background-color: aqua;
+      height: 100px;
+      width: 100px;
+    }
+  </style>
+  <body>
+    <div class="display color" id="image"></div>
+    <button type="button" id="show">Show</button>
+    <button type="button" id="hide">Hide</button>
+    <script>
+      $(document).ready(function () {
+        $("#image").addClass("display");
+        $('#show').click(function(){
+            $('#image').removeClass("display");
+        })
+        $("#hide").click(function(){
+            $('#image').addClass('display');
+        })
+      });
+    </script>
+  </body>
+</html>
