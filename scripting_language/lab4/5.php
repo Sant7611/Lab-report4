@@ -9,8 +9,9 @@ function divide($numerator, $denominator) {
 
 // Try block to catch exceptions
 try {
+    $s = 0;
     // Call the function with potential exception
-    $result = divide(10, 0);
+    $result = 5/$s;
     echo "Result of division: $result";
 } catch (Exception $e) {
     // Catch any thrown exception and handle it

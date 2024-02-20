@@ -1,9 +1,9 @@
 <?php
-class show{
+class showa{
     public function display(){
         echo " hello world";
     }
 }
 
-$obj = new show();
+$obj = new showa();
 $obj->display();
